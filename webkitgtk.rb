@@ -11,7 +11,8 @@ class Webkitgtk < Formula
   depends_on "brzosthub/icu/icu"
   depends_on "jpeg"
   depends_on "libpng"
-
+  depends_on "webp"
+  
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
