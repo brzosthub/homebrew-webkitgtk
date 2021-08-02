@@ -12,6 +12,7 @@ class Webkitgtk < Formula
   depends_on "jpeg"
   depends_on "libpng"
   depends_on "webp"
+  depends_on "pkg-config"
   
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
