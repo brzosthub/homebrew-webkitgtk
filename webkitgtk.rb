@@ -13,12 +13,13 @@ class Webkitgtk < Formula
   depends_on "libpng"
   depends_on "webp"
   depends_on "pkg-config"
-  
+  depends_on "glib"
+
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure"
+    system "./configure", "--with-target=quartz"
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
   end
 
