@@ -8,7 +8,9 @@ class Webkitgtk < Formula
   sha256 "bd1550b7f6e1a55f803efe7d64438163ff6c04f02186002cb81d0c090aac734f"
   license ""
 
-  # depends_on "cmake" => :build
+  depends_on "brzosthub/icu/icu"
+  depends_on "jpeg"
+  depends_on "libpng"
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
