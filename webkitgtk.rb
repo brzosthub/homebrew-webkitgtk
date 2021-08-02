@@ -15,6 +15,7 @@ class Webkitgtk < Formula
   depends_on "pkg-config"
   depends_on "glib"
   depends_on "pango"
+  depends_on "gtk+3"
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
