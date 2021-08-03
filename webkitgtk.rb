@@ -9,6 +9,7 @@ class Webkitgtk < Formula
   license ""
 
   depends_on "brzosthub/icu/icu"
+  depends_on "brzosthub/libsoup/libsoup"
   depends_on "jpeg"
   depends_on "libpng"
   depends_on "webp"
