@@ -23,7 +23,6 @@ class Webkitgtk < Formula
   depends_on "gstreamer"
   depends_on "gst-plugins-base"
   depends_on "gst-plugins-good"
-  depends_on "xquartz"
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
