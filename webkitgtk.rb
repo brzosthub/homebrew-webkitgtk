@@ -10,6 +10,7 @@ class Webkitgtk < Formula
 
   depends_on "brzosthub/icu/icu"
   depends_on "brzosthub/libsoup/libsoup"
+  depends_on "brzosthub/geoclue/geoclue"
   depends_on "jpeg"
   depends_on "libpng"
   depends_on "webp"
@@ -25,6 +26,7 @@ class Webkitgtk < Formula
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
     system "./configure", "--with-target=quartz"
     # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+
   end
 
   test do
