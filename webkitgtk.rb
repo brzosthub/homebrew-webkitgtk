@@ -18,15 +18,19 @@ class Webkitgtk < Formula
   depends_on "glib"
   depends_on "pango"
   depends_on "gtk+3"
+  depends_on "gtk+"
   depends_on "libsecret"
+  depends_on "gstreamer"
+  depends_on "gst-plugins-base"
+  depends_on "gst-plugins-good"
+  depends_on "xquartz"
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
     # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", "--with-target=quartz"
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-
+    system "./configure", "--prefix=#{prefix}", "--with-target=quartz"
+    system "make", "install"
   end
 
   test do
